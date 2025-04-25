@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-postgres-backup-automation",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "backup": "node backup.js",
+    "start:cron:backup": "node start-cron-backup.js",
+    "restore": "node restore.js",
+    "build": "esbuild --bundle --minify --platform=node --target=node18 --outdir=build --out-extension:.js=.cjs start-cron-backup.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^4.1.1",
+    "dotenv": "^16.4.7",
+    "dropbox": "^10.34.0",
+    "resend": "^4.1.2"
+  },
+  "engines": {
+    "node": "18.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.1"
+  }
+}
